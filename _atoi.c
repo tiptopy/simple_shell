@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * interactive - returns true if shell is in interactive mode
+ * interactive - returns true if shell is in interactive mod
  * @info: the structure address
  *
  * Return: 1 if in interactive mode, 0 otherwise
