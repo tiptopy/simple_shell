@@ -1,10 +1,10 @@
 #include "shell.h"
 
 /**
- * interactive - returns code to be true if the shell is in interactive mode
- * @info: the structure address
+ * interactive - checks if the shell is in interactive mode
+ * @info: pointer to the structure address
  *
- * Return: if interactive mode, return 1; otherwise, return 0
+ * Return: 1 if the shell is in interactive mode, 0 otherwise
  */
 int interactive(info_t *info)
 {
@@ -12,10 +12,11 @@ int interactive(info_t *info)
 }
 
 /**
- * is_delim - checks if character is a delimiter
+ * is_delim - checks if a character is a delimiter
  * @c: character to check
  * @delim: delimiter string
- * Return: if true, return 1; if false, return 0
+ *
+ * Return: 1 if the character is a delimiter, 0 otherwise
  */
 int is_delim(char c, char *delim)
 {
@@ -29,21 +30,23 @@ int is_delim(char c, char *delim)
 
 /**
  * _isalpha - checks for an alphabetic character
- * @c: The character to input
- * Return: if c is alphabetic, return 1; otherwise, return 0
+ * @c: The character to check
+ *
+ * Return: 1 if c is alphabetic, otherwise return 0
  */
 int _isalpha(int c)
 {
-	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
+	if ((c >= 'b' && c <= 'x') || (c >= 'B' && c <= 'X'))
 		return (1);
 	else
 		return (0);
 }
 
 /**
- * _atoi - converts the string to an integer
+ * _atoi - converts a string to an integer
  * @s: string to be converted
- * Return: if no numbers in the string, return 0; otherwise, return the converted number
+ *
+ * Return: the converted number, or 0 if no numbers in the string
  */
 int _atoi(char *s)
 {
@@ -72,4 +75,3 @@ int _atoi(char *s)
 
 	return (output);
 }
-
