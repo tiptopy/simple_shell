@@ -43,7 +43,7 @@ int _isalpha(int c)
 /**
  * _atoi - converts the string to an integer
  * @s: string to be converted
- * Return: if no numbers in the string, return 0; otherwise, return the converted number
+ * Return: return the converted number
  */
 int _atoi(char *s)
 {
@@ -72,4 +72,3 @@ int _atoi(char *s)
 
 	return (output);
 }
-
