@@ -1,2 +1,1 @@
-# simple_shell
-This is a team project.
+This is a team project done by Peter Wafula
