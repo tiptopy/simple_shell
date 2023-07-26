@@ -1,10 +1,10 @@
 #include "shell.h"
 
 /**
- * interactive - checks if the shell is in interactive mode
- * @info: pointer to the structure address
+ * interactive - returns true if shell is in interactive mode
+ * @info: the structure address
  *
- * Return: 1 if the shell is in interactive mode, 0 otherwise
+ * Return: 1 if in interactive mode, 0 otherwise
  */
 int interactive(info_t *info)
 {
@@ -12,26 +12,22 @@ int interactive(info_t *info)
 }
 
 /**
- * is_delim - checks if a character is a delimiter
+ * is_delim - checks if character is a delimiter
  * @c: character to check
  * @delim: delimiter string
- *
- * Return: 1 if the character is a delimiter, 0 otherwise
+ * Return: 1 if true, 0 otherwise
  */
 int is_delim(char c, char *delim)
 {
 	while (*delim)
-	{
 		if (*delim++ == c)
 			return (1);
-	}
 	return (0);
 }
 
 /**
- * _isalpha - checks for an alphabetic character
- * @c: The character to check
- *
+ * _isalpha - checks for alphabetic character
+ * @c: The character to input
  * Return: 1 if c is alphabetic, otherwise return 0
  */
 int _isalpha(int c)
@@ -43,26 +39,25 @@ int _isalpha(int c)
 }
 
 /**
- * _atoi - converts a string to an integer
+ * _atoi - converts the string to an integer
  * @s: string to be converted
- *
- * Return: the converted number, or 0 if no numbers in the string
+ * Return: converted number or 0 if no numbers in string
  */
 int _atoi(char *s)
 {
-	int i, sign = 1, flag = 0, output;
+	int j, sign = 1, flag = 0, output;
 	unsigned int result = 0;
 
-	for (i = 0; s[i] != '\0' && flag != 2; i++)
+	for (j = 0; s[j] != '\0' && flag != 2; j++)
 	{
-		if (s[i] == '-')
+		if (s[j] == '-')
 			sign *= -1;
 
-		if (s[i] >= '0' && s[i] <= '9')
+		if (s[j] >= '0' && s[j] <= '9')
 		{
 			flag = 1;
 			result *= 10;
-			result += (s[i] - '0');
+			result += (s[j] - '0');
 		}
 		else if (flag == 1)
 			flag = 2;
